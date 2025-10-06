@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17 DataTableDeleteRows", "17 DataTableDeleteRows.csproj", "{489D2EB6-D0C9-4902-BFD8-9EDB81A4E664}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{489D2EB6-D0C9-4902-BFD8-9EDB81A4E664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489D2EB6-D0C9-4902-BFD8-9EDB81A4E664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489D2EB6-D0C9-4902-BFD8-9EDB81A4E664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489D2EB6-D0C9-4902-BFD8-9EDB81A4E664}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D56EB58-E59B-4D92-BE09-530EA2FC6A0F}
+	EndGlobalSection
+EndGlobal

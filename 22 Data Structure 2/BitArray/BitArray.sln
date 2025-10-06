@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitArray", "BitArray\BitArray.csproj", "{F8EF2600-7722-412C-B86C-60A3B5AB292A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperations", "BitwiseOperations\BitwiseOperations.csproj", "{DE324549-4362-4FD2-8FB9-4C3E7F07C43E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8EF2600-7722-412C-B86C-60A3B5AB292A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8EF2600-7722-412C-B86C-60A3B5AB292A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8EF2600-7722-412C-B86C-60A3B5AB292A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8EF2600-7722-412C-B86C-60A3B5AB292A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE324549-4362-4FD2-8FB9-4C3E7F07C43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE324549-4362-4FD2-8FB9-4C3E7F07C43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE324549-4362-4FD2-8FB9-4C3E7F07C43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE324549-4362-4FD2-8FB9-4C3E7F07C43E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A59ECA1B-2B52-4EFD-93B8-561C7D7153F7}
+	EndGlobalSection
+EndGlobal

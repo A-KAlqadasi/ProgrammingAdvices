@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35323.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 BasicOperations", "BasicOperations\00 BasicOperations.csproj", "{0C053EE2-FBF3-4455-B7ED-81EFCFAAD78A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 SortedListWithLINQ", "SortedListWithLINQ\01 SortedListWithLINQ.csproj", "{9805480A-2513-4203-8E79-1BFB3AD91944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 AdvancedLINQWithGrouping", "AdvancedLINQWithGrouping\02 AdvancedLINQWithGrouping.csproj", "{A57175FB-5D39-4D8B-9517-21280C1A3B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 AdvancedLINQUsingObjects", "AdvancedLINQUsingObjects\03 AdvancedLINQUsingObjects.csproj", "{807A09BF-DD37-41A7-9AF6-AC7F4CB8E0B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 PracticeOnLINQandCollections", "PracticeOnLINQandCollections\04 PracticeOnLINQandCollections.csproj", "{C3AB15A6-8786-4CD6-A610-F22DF35CE606}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C053EE2-FBF3-4455-B7ED-81EFCFAAD78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C053EE2-FBF3-4455-B7ED-81EFCFAAD78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C053EE2-FBF3-4455-B7ED-81EFCFAAD78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C053EE2-FBF3-4455-B7ED-81EFCFAAD78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9805480A-2513-4203-8E79-1BFB3AD91944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9805480A-2513-4203-8E79-1BFB3AD91944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9805480A-2513-4203-8E79-1BFB3AD91944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9805480A-2513-4203-8E79-1BFB3AD91944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57175FB-5D39-4D8B-9517-21280C1A3B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57175FB-5D39-4D8B-9517-21280C1A3B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57175FB-5D39-4D8B-9517-21280C1A3B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57175FB-5D39-4D8B-9517-21280C1A3B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807A09BF-DD37-41A7-9AF6-AC7F4CB8E0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807A09BF-DD37-41A7-9AF6-AC7F4CB8E0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807A09BF-DD37-41A7-9AF6-AC7F4CB8E0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807A09BF-DD37-41A7-9AF6-AC7F4CB8E0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3AB15A6-8786-4CD6-A610-F22DF35CE606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3AB15A6-8786-4CD6-A610-F22DF35CE606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3AB15A6-8786-4CD6-A610-F22DF35CE606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3AB15A6-8786-4CD6-A610-F22DF35CE606}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D74007C-B7AB-49D7-8A5C-E102F2D8EF78}
+	EndGlobalSection
+EndGlobal

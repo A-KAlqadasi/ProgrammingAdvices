@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parameter-less Constructor", "Parameter-less Constructor.csproj", "{74E2831E-8F86-46D8-A88E-5B28CD767C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patameterized Constructor", "..\Patameterized Constructor\Patameterized Constructor.csproj", "{216BE9E6-CA50-4133-841B-AA09DFF4B2E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private Constructor", "..\Private Constructor\Private Constructor.csproj", "{3E3A344C-6A4D-4D6C-B94B-76AC54056936}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructor Overloading", "..\Constructor Overloading\Constructor Overloading.csproj", "{C08A3251-1443-45A8-B28D-F37491C4BC3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static Constructor", "..\Static Constructor\Static Constructor.csproj", "{D73E90F3-1264-41AF-8078-8ACB286DAE21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Destructor", "..\Destructor\Destructor.csproj", "{F962935F-2868-4835-9337-B0D0E1F7023D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealLifeApplicationOfConstructorsStaticMethods", "..\RealLifeApplicationOfConstructorsStaticMethods\RealLifeApplicationOfConstructorsStaticMethods.csproj", "{0575A161-1B9A-48C1-B7C4-387636797BA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74E2831E-8F86-46D8-A88E-5B28CD767C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E2831E-8F86-46D8-A88E-5B28CD767C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E2831E-8F86-46D8-A88E-5B28CD767C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E2831E-8F86-46D8-A88E-5B28CD767C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216BE9E6-CA50-4133-841B-AA09DFF4B2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216BE9E6-CA50-4133-841B-AA09DFF4B2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216BE9E6-CA50-4133-841B-AA09DFF4B2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216BE9E6-CA50-4133-841B-AA09DFF4B2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3A344C-6A4D-4D6C-B94B-76AC54056936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3A344C-6A4D-4D6C-B94B-76AC54056936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3A344C-6A4D-4D6C-B94B-76AC54056936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3A344C-6A4D-4D6C-B94B-76AC54056936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08A3251-1443-45A8-B28D-F37491C4BC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08A3251-1443-45A8-B28D-F37491C4BC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08A3251-1443-45A8-B28D-F37491C4BC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08A3251-1443-45A8-B28D-F37491C4BC3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73E90F3-1264-41AF-8078-8ACB286DAE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73E90F3-1264-41AF-8078-8ACB286DAE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73E90F3-1264-41AF-8078-8ACB286DAE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73E90F3-1264-41AF-8078-8ACB286DAE21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F962935F-2868-4835-9337-B0D0E1F7023D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F962935F-2868-4835-9337-B0D0E1F7023D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F962935F-2868-4835-9337-B0D0E1F7023D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F962935F-2868-4835-9337-B0D0E1F7023D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0575A161-1B9A-48C1-B7C4-387636797BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0575A161-1B9A-48C1-B7C4-387636797BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0575A161-1B9A-48C1-B7C4-387636797BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0575A161-1B9A-48C1-B7C4-387636797BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1513AB86-15B3-4E36-BDFF-BECB8BC289BC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,106 @@
+##############################
+#   Visual Studio / .NET    #
+##############################
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# VS user-specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.nuget/
+packages/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio Code
+.vscode/
+
+##############################
+#          C++              #
+##############################
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Compiled dynamic libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+##############################
+#          CMake             #
+##############################
+
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+cmake-build-*/
+
+##############################
+#      JetBrains IDEs        #
+##############################
+
+.idea/
+*.iml
+
+##############################
+#  Other Common Artifacts    #
+##############################
+
+# Logs and temp
+*.log
+*.tlog
+*.tmp
+*.temp
+
+# OS junk files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini

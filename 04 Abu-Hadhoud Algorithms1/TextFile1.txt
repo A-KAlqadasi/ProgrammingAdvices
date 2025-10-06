@@ -1,0 +1,105 @@
+//#7 half of the number.
+	int number;
+	cout << "Enter a number :: ";
+	cin >> number;
+	cout << "The half of the number is :: " << number / 2 << endl;
+
+//#9 sum of three numbers
+	int number1, number2, number3;
+	int sum =0;
+	cout << "Enter Three numbers :: ";
+	cin >> number1 >> number2 >> number3;
+	sum = number1 + number2 + number3;
+	cout << "The sum of the three numbers is :: " << sum << endl;
+
+//#10 the average of three marks
+	int mark1, mark2, mark3;
+	cout << "Enter the first mark :: ";
+	cin >> mark1;
+	cout << "Enter the second mark :: ";
+	cin >> mark2;
+	cout << "Enter the third mark :: ";
+	cin >> mark3;
+	
+	float average;
+	average = (mark1 + mark2 + mark3) / 3.0;
+	cout << "The average is :: " << average << endl;
+// #14 swaping two numbers
+	int num1, num2 , swap;
+	cout << "Enter the first number :: ";
+	cin >> num1;
+	cout << "Enter the second number :: ";
+	cin >> num2;
+	swap = num1;
+	num1 = num2;
+	num2 = swap;
+	cout << num1 << endl;
+	cout << num2 << endl;
+//#15 rectangle area
+	int a, b;
+	cout << "Ente the length of the rectangle :: ";
+	cin >> a;
+	cout << "Enter the width of the rectangle :: ";
+	cin >> b;
+	int area;
+	area = a * b;
+	cout << "The area = " << area << endl;
+//#16 rectangle area through diagonal 
+	short a, d;
+	cout << "Enter the side of the rectangle :: ";
+	cin >> a;
+	cout << "Enter the diagonal of the rectangle ::  ";
+	cin >> d;
+	float  area;
+	area = a * sqrt(d * d - a * a);
+	cout << "The area = " << area << endl;
+//# 17 the area of the triangle 
+	short a, h;
+	int  area;
+	cout << "Enter the base of the traingle :: ";
+	cin >> a;
+	cout << "Enter the high :: ";
+	cin >> h;
+	area =  a / 2 * h;
+	cout << "The area of the triangle = " << area << endl;
+//#18 circle area 
+	short radius;
+	const double PI = 3.14;
+	cout << "Enter the radius of the circle :: ";
+	cin >> radius;
+	float area = radius * radius * PI;
+	cout << "The area = " << area << endl;
+//#19 circle area through diameter
+	const float PI = 3.14 ;
+	short d;
+	float area;
+	cout << "Enter the diameter of the circle :: ";
+	cin >> d;
+	area = PI * d * d / 4;
+	cout << "The circle are = " << area << endl;
+//#20 circle are inscribed in square
+	short A;
+	const float PI = 3.14;
+	float area;
+	cout << "Enter the square side :: ";
+	cin >> A;
+	area = PI * A * A / 4;
+	cout << "The area = " << area << endl;
+// #21 circle area along the circumference 
+	const float PI = 3.14;
+	short l;
+	float area;
+	cout << "Enter the circumference :: ";
+	cin >> l;
+	area = (l * l) / (4 * PI);
+	cout  << "the area = " << area << endl;
+//#22 circle area inscribed in an isosceles traingle 
+	const float PI = 3.14;
+	float  a, b;
+	cout << "Enter the leg of the triangle :: ";
+	cin >> a;
+	cout << "Enter the base of the triangle :: ";
+	cin >> b;
+	float area;
+	area = (PI * (b * b)/4) * ((2 * a - b) / (2 * a + b));
+	cout << "The area = " << area << endl;

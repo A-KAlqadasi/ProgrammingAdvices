@@ -1,0 +1,1986 @@
+// The Second level abu-Hadhood Algorithm and problem solving
+// #1
+#include<iostream>
+using namespace std;
+
+
+void PrintTableHeader() {
+	cout << "\n\n\t\t\tMultiplication Table From 1 to 10\n" << endl;
+
+	for (int i = 1; i <= 10; i++) {
+		cout << "\t" << i;
+	}
+	cout << "\n-----------------------------------------------------------------------------------\n";
+}
+
+string ColumnsSpacetor(int i) {
+	if (i < 10) {
+		return"   |";
+	}
+	else
+		return"  |";
+}
+void PrintMultiblicationTable() {
+	PrintTableHeader();
+
+	for (int j = 1; j <= 10; j++) {
+
+		cout << " " << j << ColumnsSpacetor(j);
+		for (int i = 1; i <= 10; i++) {
+			cout <<"\t"<< i * j;
+		}
+		cout << endl;
+	}
+
+
+}
+
+int main() {
+
+	PrintMultiblicationTable();
+
+	return 0;
+}
+//---------------------------------------------------------
+// #02/2 
+#include<iostream>
+using namespace std;
+
+enum enPrimeNotPrime { Prime = 1, NotPrime = 2 };
+
+
+float ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+enPrimeNotPrime CheckPrime(int Number) {
+	int M =round(Number / 2);
+
+	for (int i = 2; i <= M; i++) {
+		if (Number % i == 0)
+			return NotPrime;
+	}
+	return Prime;
+}
+void PrintPrimeNumbersFrom1ToN(int Number) {
+	cout << "The Prime Numbers From 1 To " << Number << " : \n";
+	for (int i = 1; i <= Number; i++) {
+		if (CheckPrime(i) == enPrimeNotPrime::Prime)
+			cout << i << "\n";
+	}
+}
+int main() {
+	PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Enter a positive Number\n?"));
+	
+	return 0;
+}
+//--------------------------------------
+// #03/2 the perfect number
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+bool IsPerfectNumber(int Number) {
+	int HalfOfNumber = Number / 2;
+	int Sum =0;
+	for (int i = 1; i <= HalfOfNumber; i++) {
+		if (Number % i  == 0) {
+			Sum += i;
+		}
+	}
+	return Sum == Number;
+}
+void PrintResult(int Number) {
+	if (IsPerfectNumber(Number))
+		cout << Number << " is perfect Number\n";
+	else
+		cout << Number << " is Not Perfect Number\n";
+
+}
+
+int main() {
+
+	PrintResult(ReadPositiveNumber("Plz , Enter a positive number "));
+
+	return 0;
+}
+//-------------------------------------------
+// #04/2 Print perfect Numbers from 1 to N
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+bool IsPerfectNumber(int Number) {
+	int HalfOfNumber = Number / 2;
+	int Sum =0;
+	for (int i = 1; i <= HalfOfNumber; i++) {
+		if (Number % i  == 0) {
+			Sum += i;
+		}
+	}
+	return Sum == Number;
+}
+void PrintPerfectNumberFrom1ToN(int Number) {
+	cout << "All the Perfect Numbers From 1 to " << Number << endl;
+	for (int i = 1; i <= Number; i++) {
+		if (IsPerfectNumber(i))
+			cout << i << endl;
+	}
+
+}
+
+int main() {
+
+	PrintPerfectNumberFrom1ToN(ReadPositiveNumber("Plz , Enter a positive number "));
+
+	return 0;
+}
+// #05/2 Print Digits in Reserved order
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void PrintDigitsInReserved(int Number) {
+	int Num =0;
+	do {
+
+		Num= Number % 10;
+		cout << Num << endl;
+
+		Number = Number / 10;
+		
+	} while (Number>0);
+
+}
+int main() {
+	PrintDigitsInReserved(ReadPositiveNumber("Plz, Enter a positive number?"));
+	
+	return 0;
+}
+// ----------------------------------------------
+//# 06/2 The Sum of digits in Number
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+int SumOfDigits(int Number) {
+	int Num =0;
+	int Sum = 0;
+	while (Number > 0) {
+
+		Num= Number % 10;
+		Number = Number / 10;
+		Sum += Num;
+		
+	}
+	return Sum;
+}
+int main() {
+	cout << "\nThe Sum of Digits = "
+		 << SumOfDigits(ReadPositiveNumber("Plz, Enter a positive number?"));
+	
+	return 0;
+}
+// # 07/2 make Reserve Number Not Print in reserved order
+#include<iostream>
+#include <string>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+int ReverseNumber(int Number) {
+	int Remander =0;
+	int Number2 = 0;
+	while (Number > 0) {
+		Remander = Number % 10;
+		Number = Number / 10;
+		Number2 = Number2 * 10 + Remander;
+	}
+	return Number2;
+}
+int main() {
+	cout << "\nReserved is: "
+		<< ReverseNumber(ReadPositiveNumber("Plz, Enter a positive number?")) << endl;
+	
+	return 0;
+}
+// ------------------------------------------------
+// # 08/2  count the Frequency of digit of main number
+#include<iostream>
+#include <string>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+int CountDigitFrequency(int Number , short Digit ) {
+	int Remander =0;
+	int Frequence = 0;
+	while (Number > 0) {
+		Remander = Number % 10;
+		Number = Number / 10;
+		if (Remander == Digit)
+			Frequence++;
+	}
+	return Frequence;
+}
+void PrintFrequency(int Number) {
+	short Digit = ReadPositiveNumber("Plz, Enter a digit of the main Number?");
+	
+	cout << "Digit " << Digit << " Frequency is " << CountDigitFrequency(Number, Digit) << " times\n";
+}
+int main() {
+
+	PrintFrequency(ReadPositiveNumber("Please, Enter main Number?"));
+
+	return 0;
+}
+// -------------------------------------------------------
+// #09/2 Digits Frequency 
+#include<iostream>
+#include <string>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+int CountDigitFrequency(int Number , short Digit ) {
+	int Remander =0;
+	int Frequence = 0;
+	while (Number > 0) {
+		Remander = Number % 10;
+		Number = Number / 10;
+		if (Remander == Digit)
+			Frequence++;
+	}
+	return Frequence;
+}
+void PrintAllDigitsFrequence(int Number) {
+	for (int i = 0; i < 10; i++) {
+		short DigitFreq = CountDigitFrequency(Number, i);
+
+		if (DigitFreq > 0)
+		cout << i << " Frequency is " << DigitFreq << " times\n";
+	}
+	
+}
+int main() {
+
+	int Number = ReadPositiveNumber("Please, Enter main Number?");
+	PrintAllDigitsFrequence(Number);
+
+	return 0;
+}
+//-----------------------------------------------------------
+// #10 / 2 Print Digits in Order
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+int NumberReserved(int Number) {
+	int Remander = 0;
+	int Num2 = 0;
+	while (Number > 0) {
+		Remander = Number % 10;
+		Number = Number / 10;
+		Num2 = Num2 * 10 + Remander;
+
+	}
+	return Num2;
+}
+void PrintDigitsInOrder(int Number) {
+	int Remander = 0;
+	
+	while (Number > 0) {
+		Remander = Number % 10;
+		cout << Remander << endl;
+		Number = Number / 10;
+	}
+
+}
+int main() {
+
+	PrintDigitsInOrder(NumberReserved(ReadPositiveNumber("Plz, Enter a positive number?")));
+
+	return 0;
+}
+//-----------------------------------------------------------
+// #11/2 is Palindom Number or Not
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+int NumberReserved(int Number) {
+	int Remander = 0;
+	int Num2 = 0;
+	while (Number > 0) {
+		Remander = Number % 10;
+		Number = Number / 10;
+		Num2 = Num2 * 10 + Remander;
+
+	}
+	return Num2;
+}
+
+bool IsPalindomNumber(int Number) {
+	return Number == NumberReserved(Number);
+}
+int main() {
+
+		int Number = ReadPositiveNumber("Plz, Enter positive Number?");
+
+		if (IsPalindomNumber(Number))
+			cout << "Yes, " << Number << " is PalindomNumber." << endl;
+		else
+			cout << "No, " << Number << " is Not PalindomNumber." << endl;
+
+
+	return 0;
+}
+//---------------------------------------------------------------------
+// #12/2 Print inverted Number pattern
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void PrintInvertedNumberPattern(int Number) {
+	cout << "\n";
+	for (int i = Number; i >= 1; i--)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			cout << i;
+		}
+		cout << endl;
+	}
+
+}
+
+int main() {
+		
+	PrintInvertedNumberPattern(ReadPositiveNumber("Plz, Enter positive Number?"));
+
+	return 0;
+}
+//------------------------------------
+// #13/2 Print Number Pattern 
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void PrintNumberPattern(int Number) {
+	cout << "\n";
+	for (int i = 1; i <=Number; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			cout << i;
+		}
+		cout << endl;
+	}
+
+}
+
+int main() {
+		
+	PrintNumberPattern(ReadPositiveNumber("Plz, Enter positive Number?"));
+
+	return 0;
+}
+// ---------------------------------------------------------------
+// #14/2 Print inverted Letter Pattern
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void PrintInvertedLetterPattern(int Number) {
+	cout << "\n";
+	for (int i = Number; i >= 1; i--)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			cout << char(64 + i);
+		}
+		cout << endl;
+	}
+}
+
+int main() {
+		
+	PrintInvertedLetterPattern(ReadPositiveNumber("Plz, Enter positive Number?"));
+
+	return 0;
+}
+// -----------------------------------------------------------------
+// #15/2 Print Letter Pattern 
+#include<iostream>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void PrintLetterPattern(int Number) {
+	cout << endl;
+	for (int i = 65; i <= 65 + Number - 1; i++) {
+		for (int j = 1; j <= i - 65 + 1; j++)
+			cout << char(i);
+		cout << endl;
+	}
+}
+
+int main() {
+		
+	PrintLetterPattern(ReadPositiveNumber("Plz, Enter positive Number?"));
+
+	return 0;
+}
+//------------------------------------------------
+// #16/2 Print all word from AAA to ZZZ 
+#include<iostream>
+using namespace std;
+
+
+void PrintWordsfromAAAToZZZ() {
+	cout << endl;
+	string word = "";
+	for (int i = 65; i <= 90; i++) 
+	{
+		for (int j = 65; j <= 90; j++)
+		{
+			for (int k = 65; k <= 90; k++)
+			{
+				word = word + char(i);
+				word = word + char(j);
+				word = word + char(k);
+				cout << word << endl;
+				word = "";
+			}
+		}
+	}
+}
+
+int main() {
+	PrintWordsfromAAAToZZZ();
+
+	return 0;
+}
+//--------------------------------------------
+// #17/2 Guess password of 3-Letters Capital
+#include<iostream>
+using namespace std;
+
+
+string ReadPassword() {
+	string Password;
+	cout << "Please, Enter the Three Capital Letters Password\n?";
+	cin >> Password;
+	return Password;
+}
+bool GuessPassword(string Password) {
+	cout << endl;
+	int counter = 0;
+	string word = "";
+	for (int i = 65; i <= 90; i++) 
+	{
+		for (int j = 65; j <= 90; j++)
+		{
+			for (int k = 65; k <= 90; k++)
+			{
+				counter++;
+				word = word + char(i);
+				word = word + char(j);
+				word = word + char(k);
+				
+				cout << "Trial [" << counter << "] :" << word << endl;
+
+				if (Password == word) {
+					cout << "\npassword is : " << word << endl;
+					cout << "Found after :" << counter << " trials\n";
+
+					return true;
+				}
+				word = "";
+			}
+			
+		}
+		
+	}
+	return false;
+}
+
+int main() {
+	GuessPassword(ReadPassword());
+
+	return 0;
+}
+//--------------------------------------------------
+//#18/2 Encrypt and Decrypt Text 
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+string ReadText() {
+	string Text;
+	cout << "Please, Enter Text To Encryption\n?";
+	getline(cin, Text);
+	return Text;
+}
+
+string EncryptText(string Text, short EncryptionKey)
+{
+	for (int i = 0; i <= Text.length(); i++) {
+
+		Text[i] = char((int)Text[i] + EncryptionKey);
+		//We can write it like Text[i] - EncryptionKey
+		
+	}
+	return Text;
+}
+string DecryptText(string Text, short EncryptionKey) {
+
+	for (int i = 0; i < Text.length(); i++) {
+
+		Text[i] = char((int)Text[i] - EncryptionKey);
+		//We can write it like Text[i] - EncryptionKey
+	}
+	return Text;
+}
+
+int main() {
+	const short EncryptionKey = 2;
+	string Text = ReadText();
+	string TextAfterEncryption = EncryptText(Text, EncryptionKey);
+	string TextAfterDecryption = DecryptText(TextAfterEncryption, EncryptionKey);
+
+	cout << "\nText Befor Encryption : "<< Text << endl;
+	cout << "Text After Encryption : " <<TextAfterEncryption << endl;
+	cout << "Text After Decryption : " << TextAfterDecryption << endl;
+
+	return 0;
+}
+//----------------------------------------------------------------
+// #19/2 Random Numbers From N To N 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+int RandomNumbersFromTo(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+int main() {
+	srand((unsigned)time(NULL));
+
+	cout << RandomNumbersFromTo(5, 10) << endl;
+	cout << RandomNumbersFromTo(5, 10) << endl;
+	cout << RandomNumbersFromTo(5, 10) << endl;
+
+	return 0;
+}
+//-----------------------------------------------------------------------------
+// #20 / 2 Print Random Charecters from all types Capital , small , digit , spicial
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+enum enRandomType { CapitLetter = 1 ,SmaLetter=2 , Digit =3,SpiciaLetter =4 };
+
+int RandomCharecters(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+char GetRandomCharecter(enRandomType RandomType) {
+	switch (RandomType)
+	{
+	case CapitLetter:
+		return (char)RandomCharecters(65, 90);
+	case SmaLetter:
+		return (char)RandomCharecters(97 , 122);
+	case SpiciaLetter:
+		return (char)RandomCharecters(33, 47);
+	case Digit:
+		return (char)RandomCharecters(48, 57);
+	default:
+		break;
+	}
+	
+}
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	cout << GetRandomCharecter(enRandomType::CapitLetter)  << endl;
+	cout << GetRandomCharecter(enRandomType::SmaLetter)  << endl;
+	cout << GetRandomCharecter(enRandomType::SpiciaLetter)  << endl;
+	cout << GetRandomCharecter(enRandomType::Digit) << endl;
+
+	return 0;
+}
+//----------------------------------------------------------------------------
+// #21/2 Generate Random Keys
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+enum enRandomType { CapitLetter = 1, SmaLetter = 2, Digit = 3, SpiciaLetter = 4 };
+int RandomCharecters(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+char GetRandomCharecter(enRandomType RandomType) {
+	switch (RandomType)
+	{
+	case CapitLetter:
+		return (char)RandomCharecters(65, 90);
+	case SmaLetter:
+		return (char)RandomCharecters(97, 122);
+	case SpiciaLetter:
+		return (char)RandomCharecters(33, 47);
+	case Digit:
+		return (char)RandomCharecters(48, 57);
+	default:
+		break;
+	}
+
+}
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+string GenrateWord(enRandomType Randomtype , short Wordlength) {
+
+	string Generated = "";
+	for (int i = 1; i <= Wordlength; i++) {
+		Generated  += GetRandomCharecter(Randomtype);
+	}
+	return Generated;
+}
+string GenrateKey() {
+	string Key = "";
+
+		Key += GenrateWord(enRandomType::CapitLetter, 4) + "-";
+		Key += GenrateWord(enRandomType::CapitLetter, 4) + "-";
+		Key += GenrateWord(enRandomType::CapitLetter, 4) + "-";
+		Key += GenrateWord(enRandomType::CapitLetter, 4);
+
+
+	return Key;
+}
+void PrintGeneratedKeys(int Keys) {
+
+	for (int i = 1; i <= Keys; i++) {
+		cout << "Key[" << i << "] : ";
+		cout << GenrateKey() << endl;
+	}
+}
+
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	PrintGeneratedKeys(ReadPositiveNumber("How Many Keys You want to Generate ? "));
+
+	
+	return 0;
+}
+// --------------------------------------------------------------------------------
+// #22/2 Print Array elements and repeted elements checking 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+void ReadArray(int Array[100], int &arrLength) {
+	cout << "Enter Array Length ?";
+	cin >> arrLength;
+
+	for (int i = 0; i < arrLength; i++) {
+		cout << "Element [" << i + 1 << "] : ";
+		cin >> Array[i];
+	}
+}
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		 cout << Array[i] << " ";
+
+	cout << endl;
+	
+}
+int TimesRepeated(int Array[100], int arrLength, int NumberToCheck) {
+	int count = 0;
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (NumberToCheck == Array[i])
+			count++;
+	}
+	return count;
+}
+int main() {
+	int Array[100] , arrLength , NumberToChech;
+	
+	ReadArray(Array, arrLength);
+	
+	 NumberToChech = ReadPositiveNumber("Plz, Enter the Number you want to Chech");
+	 cout << "\nOrginal Array: ";
+	 PrintArray(Array, arrLength);
+	 cout << "\n Number " << NumberToChech;
+	 cout << " is repeated ";
+	 cout << TimesRepeated(Array, arrLength, NumberToChech) << " time(s)\n";
+
+	return 0;
+}
+// ------------------------------------------------------------------------
+// #23,24,25, 26, 27 /2 fill array with RandomNumbers 23 and print the max Number 24 and min 25
+// 26 Sum of Array  27 average array 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int &arrLength) {
+	cout << "Enter Array Length ?";
+	cin >> arrLength;
+
+	for (int i = 0; i < arrLength; i++) {
+		 Array[i]= RandomNumber(1 , 100);
+	}
+}
+int MinNumberOfArray(int Array[100], int arrLength)
+{
+	int min = Array[0];
+	for (int i = 0; i < arrLength; i++) {
+
+		if (Array[i] <= min)
+			min = Array[i];
+	}
+	return min;
+}
+
+int MaxNumberOfArray(int Array[100], int arrLength)
+{
+	int max = Array[0];
+	for (int i = 0; i < arrLength; i++) {
+		if (Array[i] >= max)
+			max = Array[i];
+	}
+	return max;
+}
+int SumArray(int Array[100], int arrLength) {
+	int Sum = 0;
+	for (int i = 0; i < arrLength; i++) {
+		Sum += Array[i];
+	}
+	return Sum;
+}
+
+float ArrayAverage(int Array[100], int arrLength) {
+	return (float)SumArray(Array, arrLength) / arrLength;
+}
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		 cout << Array[i] << " ";
+
+	cout << endl;
+	
+}
+int main() {
+	srand((unsigned)time(NULL));
+
+	int Array[100] , arrLength;
+	
+	FillArrayWithRandomNumbers(Array, arrLength);
+	
+	 cout << "\nRandom Array Elements: ";
+	 PrintArray(Array, arrLength);
+	
+	 cout << "\n The maximum Number of Array is : ";
+	 cout << MaxNumberOfArray(Array, arrLength) << endl;
+	 
+	 cout << "\n The Min Number of Array is : ";
+	 cout << MinNumberOfArray(Array, arrLength) << endl;
+
+	 cout << "\nSum of Array : " << SumArray(Array, arrLength) << endl;
+	 cout << "\n Average of Array : " << ArrayAverage(Array, arrLength) << endl;
+
+	 return 0;
+}
+// -----------------------------------------------------------------
+// #28 , 29  /2  copy array 28 and 29 copy only prime numbers 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+enum enPrimeNotPrime { Prime = 1, NotPrime = 2 };
+enPrimeNotPrime CheckPrime(int Number) {
+	int M = round(Number / 2);
+
+	for (int i = 2; i <= M; i++) {
+		if (Number % i == 0)
+			return NotPrime;
+	}
+	return Prime;
+}
+
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int &arrLength) {
+	cout << "Enter Array Length ?";
+	cin >> arrLength;
+
+	for (int i = 0; i < arrLength; i++) {
+		 Array[i]= RandomNumber(1 , 100);
+	}
+}
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		 cout << Array[i] << " ";
+
+	cout << endl;
+	
+}
+
+void CopyArrayPrimeNumbers(int ArraySource[100],int ArrayDistination[100], int arrLength , int &arr2Length ) {
+	int NewLength=0;
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (CheckPrime(ArraySource[i]) == enPrimeNotPrime::Prime) {
+			
+			ArrayDistination[NewLength] = ArraySource[i];
+			NewLength++;
+		
+		}
+	}
+	arr2Length = NewLength;
+}
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	int Array[100] , arrLength ;
+	
+	FillArrayWithRandomNumbers(Array, arrLength);
+
+	int  Array2[100], arr2Length;
+	CopyArrayPrimeNumbers(Array, Array2, arrLength, arr2Length);
+
+	 cout << "\nArray 1 :  ";
+	 PrintArray(Array, arrLength);
+
+	 cout << "\nprime Numbers copy arrasy2: ";
+	 PrintArray(Array2, arr2Length);
+
+
+return 0;
+}
+// -------------------------------------------------------------
+// # 30/2 Sum of two arrays in one array 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int arrLength) {
+
+	for (int i = 0; i < arrLength; i++) {
+		 Array[i]= RandomNumber(1 , 100);
+	}
+}
+
+void Sum2ArraysToThird(int Array[100], int Array2[100], int Array3[100], int arrLength)
+{
+	for (int i = 0; i < arrLength; i++)
+	{
+		Array3[i] = Array[i] + Array2[i];
+	}
+}
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		 cout << Array[i] << " ";
+
+	cout << endl;
+	
+}
+
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	int Array[100] , arrLength ;
+	int  Array2[100] , ArrSum[100];
+	arrLength = ReadPositiveNumber("Plz, Enter array length?");
+
+	FillArrayWithRandomNumbers(Array, arrLength);
+	FillArrayWithRandomNumbers(Array2, arrLength);
+	
+	Sum2ArraysToThird(Array, Array2, ArrSum, arrLength);
+
+	 cout << "\nArray 1 :  \n";
+	 PrintArray(Array, arrLength);
+	 cout << "\nArray2 : \n";
+	 PrintArray(Array2, arrLength);
+	 cout << "\n Sum of array1 and array2 elements: \n";
+	 PrintArray(ArrSum, arrLength);
+
+
+return 0;
+}
+// # 31/2 Suffling the array elements 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void FillArrayWith1toN(int Array[100], int arrLength) {
+
+	for (int i = 0; i < arrLength; i++) {
+		Array[i] = 1 + i;
+	}
+}
+
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		 cout << Array[i] << " ";
+
+	cout << endl;
+	
+}
+void Swap(int& A, int& B) {
+	int Temp;
+	Temp = A;
+	A = B;
+	B = Temp;
+}
+
+void ShuffleArray(int Array[100], int arrLength) {
+
+	for (int i = 0; i < arrLength; i++)
+	{
+	Swap(Array[RandomNumber(1, arrLength) - 1], Array[RandomNumber(1, arrLength) - 1]);
+	}
+
+}
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	int Array[100] , arrLength ;
+	
+	arrLength = ReadPositiveNumber("Plz, Enter array length?");
+
+	FillArrayWith1toN(Array, arrLength);
+	
+	cout << "\nArray elements before shuffle:\n";
+	PrintArray(Array, arrLength);
+
+	ShuffleArray(Array, arrLength);
+
+	cout << "\n Array elements after shuffle:\n";
+	PrintArray(Array, arrLength);
+	
+	return 0;
+}
+// -------------------------------------------------------------
+// #32/2 Copy array elements in reverse order 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int arrLength) {
+
+	for (int i = 0; i < arrLength; i++) {
+		Array[i] = RandomNumber(1, 100);
+	}
+}
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		 cout << Array[i] << " ";
+
+	cout << endl;
+	
+}
+
+void CopyArrayInReverseOrder(int arrSource[100], int ArrDestination[100], int arrLength)
+{
+	for (int i = 0 ; i <arrLength; i++) {
+		ArrDestination[i] = arrSource[arrLength - i - 1];
+	}
+}
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	int Array[100] , arrLength ;
+	arrLength = ReadPositiveNumber("Plz, Enter array length?");
+
+	FillArrayWithRandomNumbers(Array, arrLength);
+	
+	cout << "\nNormal Array:\n";
+	PrintArray(Array, arrLength);
+
+	int Array2[100];
+	CopyArrayInReverseOrder(Array,Array2 , arrLength);
+
+	cout << "\nCopy Array in researved order : \n";
+	PrintArray(Array2, arrLength);
+
+	return 0;
+}
+// -------------------------------------------------------
+// #33 / 2 Generate keys and put them in function 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+enum enRandomType { CapitLetter = 1, SmaLetter = 2, Digit = 3, SpiciaLetter = 4 };
+int RandomCharecters(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+char GetRandomCharecter(enRandomType RandomType) {
+	switch (RandomType)
+	{
+	case CapitLetter:
+		return (char)RandomCharecters(65, 90);
+	case SmaLetter:
+		return (char)RandomCharecters(97, 122);
+	case SpiciaLetter:
+		return (char)RandomCharecters(33, 47);
+	case Digit:
+		return (char)RandomCharecters(48, 57);
+	default:
+		break;
+	}
+
+}
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+string GenrateWord(enRandomType Randomtype, short Wordlength) {
+
+	string Generated = "";
+	for (int i = 1; i <= Wordlength; i++) {
+		Generated += GetRandomCharecter(Randomtype);
+	}
+	return Generated;
+}
+string GenrateKey() {
+
+	string Key = "";
+
+	Key += GenrateWord(enRandomType::CapitLetter, 4) + "-";
+	Key += GenrateWord(enRandomType::CapitLetter, 4) + "-";
+	Key += GenrateWord(enRandomType::CapitLetter, 4) + "-";
+	Key += GenrateWord(enRandomType::CapitLetter, 4);
+
+
+	return Key;
+}
+void FillArrayWitKeys(string Array[100], int arrLength) {
+
+	for (int i = 0; i <= arrLength; i++) {
+		Array[i] = GenrateKey();
+	}
+}
+void PrintStringArray(string Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++) {
+		cout << "Array[" << i << "] : ";
+		cout << Array[i] << endl;
+	}
+
+}
+
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	string Array[100];
+	int arrLength = ReadPositiveNumber("How Many Keys do You want to Generate ?");
+	
+	FillArrayWitKeys(Array , arrLength);
+
+	PrintStringArray(Array, arrLength);
+
+	return 0;
+}
+// ---------------------------------------------------------
+// #34/2 Search Number in array and its position
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int arrLength) {
+
+	for (int i = 0; i < arrLength; i++) {
+		Array[i] = RandomNumber(1, 100);
+	}
+}
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		cout << Array[i] << " ";
+
+	cout << endl;
+
+}
+int FindElementInArray(int Array[100], int arrLength, int NumSearch)
+{
+	for (int i = 0; i < arrLength; i++) {
+		if (NumSearch == Array[i]) {
+			return i;
+		}
+	}
+	return -1;
+}
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	int Array[100];
+	int arrLength = ReadPositiveNumber("Enter the length of Array ?");
+	
+	FillArrayWithRandomNumbers(Array, arrLength);
+
+	cout << "\nArray elements: \n";
+	PrintArray(Array, arrLength);
+	
+	int NumSearch = ReadPositiveNumber("Please, Enter Number to search in Array ?");
+	
+	cout << "The Number you search is : " << NumSearch << endl;
+
+	short NumberPosition = SearchElementInArray(Array, arrLength, NumSearch);
+	
+	if (NumberPosition == -1) {
+		cout << "the Number is  not found:-(" << endl;
+	}
+	else {
+		cout << "it is found at position : " << NumberPosition << endl;
+		cout << "its order is : " << NumberPosition + 1 << endl;
+	}
+
+	return 0;
+}
+// -----------------------------------------
+// #35 / 2 is the number found or not in the array 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int arrLength) {
+
+	for (int i = 0; i < arrLength; i++) {
+		Array[i] = RandomNumber(1, 100);
+	}
+}
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		cout << Array[i] << " ";
+
+	cout << endl;
+
+}
+int FindElementInArray(int Array[100], int arrLength, int NumSearch)
+{
+	for (int i = 0; i < arrLength; i++) {
+		if (NumSearch == Array[i]) {
+			return i;
+		}
+	}
+	return -1;
+}
+bool IsNumberInArray(int Array[100], int arrLength, int NumSearch)
+{
+	return FindElementInArray(Array , arrLength, NumSearch) != -1;
+}
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	int Array[100];
+	int arrLength = ReadPositiveNumber("Enter the length of Array ?");
+	
+	FillArrayWithRandomNumbers(Array, arrLength);
+
+	cout << "\nArray elements: \n";
+	PrintArray(Array, arrLength);
+	
+	int NumSearch = ReadPositiveNumber("Please, Enter Number to search in Array ?");
+	
+	cout << "The Number you search is : " << NumSearch << endl;
+
+	
+	if (!IsNumberInArray(Array, arrLength, NumSearch)) {
+		cout << "No , the number is not found :-(";
+	}
+	else {
+		cout << "Yes , the Number is   found:-)" << endl;
+	}
+
+	return 0;
+}
+//------------------------------------------------------
+// #36/2 simi-dynamic Array 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+
+
+int ReadNumber(int Array[100], int& arrLength)
+{
+	int Number = 0;
+	cout << "Please, Enter a number ?\n";
+	cin >> Number;
+	return Number;
+}
+void AddArrayElement(int Number ,int Array[100], int& arrLength ) {
+	 arrLength++;
+	 Array[arrLength - 1] = Number;
+}
+
+void InputUserNumbersInArray(int Array[100], int& arrLength) {
+	bool AddNum = true;
+	do {
+		AddArrayElement(ReadNumber(Array, arrLength), Array, arrLength);
+
+		cout << "Do you Want To Add More ? [0]:NO ,[1] Yes?" << endl;
+		cin >> AddNum;
+
+	} while (AddNum);
+
+}
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		cout << Array[i] << " ";
+
+	cout << endl;
+
+}
+
+int main() {
+
+
+	int Array[100];
+	int arrLength =0;
+	InputUserNumbersInArray(Array, arrLength);
+
+	cout << "The array Length: " << arrLength << endl;
+	cout << "Array elements: ";
+	PrintArray(Array, arrLength);
+
+	return 0;
+}
+// -------------------------------------------------------
+// #37 , 38 ,39  /2 Copy array elements using AddArrayElements function 38 odd Numbers
+// 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+int ReadPositiveNumber(string Massage)
+{
+	float Number = 0;
+	do
+	{
+		cout << Massage << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+void AddArrayElement(int Number, int Array[], int& arrLength) {
+	arrLength++;
+	Array[arrLength - 1] = Number;
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int arrLength) {
+
+	for (int i = 0; i < arrLength; i++) {
+		Array[i] = RandomNumber(1, 100);
+	}
+}
+
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		cout << Array[i] << " ";
+
+	cout << endl;
+
+}
+void CopyArrayUsingAddArrayElement(int arrSource[100], int arrDistination[100], int arrLength, int & arrDistinationLength) {
+	for (int i = 0; i < arrLength; i++) {
+		
+		AddArrayElement(arrSource[i], arrDistination, arrDistinationLength);
+
+	}
+}
+void CopyOddNumbers(int arrSource[100], int arrDistination[100], int arrLength, int & arrDistinationLength) {
+	for (int i = 0; i < arrLength; i++) {
+		if (arrSource[i] % 2 != 0)
+		{
+			AddArrayElement(arrSource[i], arrDistination, arrDistinationLength);
+		}
+	}
+}
+
+int main() {
+
+
+	int Array[100];
+	int arrLength =0;
+	
+	arrLength = ReadPositiveNumber("Enter the array 1 Length?");
+	FillArrayWithRandomNumbers(Array, arrLength);
+	
+	cout << "Array 1 elements:\n";
+	PrintArray(Array, arrLength);
+	
+	int Array2[100];
+	int arrLength2=0;
+	CopyArrayUsingAddArrayElement(Array, Array2, arrLength , arrLength2);
+	cout << "\nArray 2 elements:\n";
+	PrintArray(Array2, arrLength2);
+	// 38 
+	CopyOddNumbers(Array, Array2, arrLength, arrLength2);
+	cout << "\nArray 2 Odd elements:\n";
+	PrintArray(Array2, arrLength2);
+
+
+
+	return 0;
+}
+// ------------------------------------------------------------
+// #40 /2 Copy distnict numbers from the array 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+void FillArray(int Array[], int& arrLength) {
+	arrLength = 10;
+	Array[0] = 10;
+	Array[1] = 10;
+	Array[2] = 50;
+	Array[3] = 50;
+	Array[4] = 70;
+	Array[5] = 70;
+	Array[6] = 70;
+	Array[7] = 50;
+	Array[8] = 90;
+	Array[9] = 90;
+
+}
+void AddArrayElement(int Number, int Array[], int& arrLength) {
+	arrLength++;
+	Array[arrLength - 1] = Number;
+}
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		cout << Array[i] << " ";
+	cout << endl;
+
+}
+int FindNumberPositionInArray(int Array[100], int arrLength, int NumSearch)
+{
+	for (int i = 0; i < arrLength; i++) {
+		if (NumSearch == Array[i]) {
+			return i;
+		}
+	}
+	return -1;
+}
+bool IsNumberInArray(int Array[100], int arrLength, int NumSearch)
+{
+	return FindNumberPositionInArray(Array, arrLength, NumSearch) != -1;
+}
+
+void CopyDistinctNumbers(int arrSource[100], int arrDistination[100], int arrLength, int & arrDistinationLength) {
+
+	for (int i = 0; i < arrLength; i++) {
+			if (!IsNumberInArray(arrDistination, arrDistinationLength, arrSource[i])) {
+				AddArrayElement(arrSource[i], arrDistination, arrDistinationLength);
+		}
+	}
+}
+int main() {
+	//
+	srand((unsigned)time(NULL));
+	int ArrSource[100],arrSourceLength =0  , ArrDistination[100] , arrDistinLength =0;
+	FillArray(ArrSource, arrSourceLength);
+
+
+	cout << "Array 1 elements:\n";
+	PrintArray(ArrSource, arrSourceLength);
+
+	CopyDistinctNumbers(ArrSource, ArrDistination, arrSourceLength, arrDistinLength);
+
+	cout << "\nArray 2 distnict elements:\n";
+	PrintArray(ArrDistination, arrDistinLength);
+
+
+
+	return 0;
+}
+// ---------------------------------------------------------------------
+// # 41/2 is array palindrome or not 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+void FillArray(int Array[], int& arrLength) {
+	arrLength = 5;
+	Array[0] = 10;
+	Array[1] = 20;
+	Array[2] = 30;
+	Array[3] = 20;
+	Array[4] = 10;
+
+}
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		cout << Array[i] << " ";
+	cout << endl;
+
+}
+
+bool IsPalindromeArray(int Array[], int arrLength) {
+	for (int i = 0; i < arrLength; i++) {
+		if (Array[i] != Array[arrLength -i-1]) {
+			return false;
+		}
+			
+	}
+	return true;
+}
+int main() {
+
+	srand((unsigned)time(NULL));
+	int Array[100], arrLength = 0;
+
+	FillArray(Array, arrLength);
+
+
+
+	cout << "Array elements:\n";
+	PrintArray(Array, arrLength);
+
+	if (IsPalindromeArray(Array , arrLength) ) {
+		cout << "Array is palindom " << endl;
+	}
+	else
+	{
+		cout << "Array is Not Palindom " << endl;
+	}
+
+
+
+
+	return 0;
+}
+// -------------------------------------
+// # 42 , 43 / 2 count odd number and even numbers 43 
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+int RandomNumber(int From, int To) {
+	int Number;
+	Number = rand() % (To - From + 1) + From;
+	return Number;
+
+}
+
+void FillArrayWithRandomNumbers(int Array[100], int &arrLength) {
+	cout << "Plz, Enter the length of Array?\n";
+	cin >> arrLength;
+
+	for (int i = 0; i < arrLength; i++) {
+		Array[i] = RandomNumber(1, 100);
+	}
+}
+int OddCount(int Array[100], int arrLength) {
+	int counter = 0;
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (Array[i] % 2 != 0)
+			counter++;
+	}
+	return counter;
+}
+int EvenCount(int Array[100], int arrLength) {
+	int counter = 0;
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (Array[i] % 2 == 0)
+			counter++;
+	}
+	return counter;
+}
+int PositiveCount(int Array[100], int arrLength) {
+	int counter = 0;
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (Array[i] >= 0)
+			counter++;
+	}
+	return counter;
+}
+int NegitiveCount(int Array[100], int arrLength) {
+	int counter = 0;
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (Array[i] < 0)
+			counter++;
+	}
+	return counter;
+}
+
+void PrintArray(int Array[100], int arrLength) {
+	for (int i = 0; i < arrLength; i++)
+		cout << Array[i] << " ";
+	cout << endl;
+
+}
+
+int main() {
+
+	srand((unsigned)time(NULL));
+
+	int Array[100], arrLength = 0;
+	FillArrayWithRandomNumbers(Array, arrLength);
+	
+	cout << "\nArray elements:\n";
+	PrintArray(Array, arrLength);
+	// 42 odd count
+	//cout << "Odd Numbers count: " << OddCount(Array, arrLength) << endl;
+	// 43  even count 
+	cout << "Even Numbers count: " << EvenCount(Array, arrLength) << endl;
+	// 44 positive count 
+	cout << "Positive Numbers count: " << PositiveCount(Array, arrLength) << endl;
+	// 45 Negative count 
+	cout << "Negative Numbers count: " << NegitiveCount(Array, arrLength) << endl;
+
+	return 0;
+}
+// ----------------------------------------------------------------------------
+// # 64 , 47 / 2 abs and round founctions
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+
+float  ReadNumber() {
+	float Number;
+	cout << "Enter a number ?\n";
+	cin >> Number;
+	return Number;
+}
+
+float MyABS(float Number) {
+	if (Number > 0)
+	{
+		return Number;
+	}
+	else
+		return Number * -1;
+}
+
+float GetFractionPart(float Number) {
+	return Number - int(Number);
+}
+
+int MyRound(float Number) {
+	int IntPart;
+	IntPart = int(Number);
+
+	float FractionPart = GetFractionPart(Number);
+	if (abs(FractionPart) >= .5)
+	{
+		if (Number > 0)
+			return ++IntPart;
+		else
+			return --IntPart;
+	}
+	else
+		return IntPart;
+	
+}
+int MyFloor(float Number) {
+	if (Number > 0)
+		return int(Number);
+	else
+		return int(Number) - 1;
+
+}
+int MyCeil(float Number) {
+
+	int IntPart = int(Number);
+	float FractionPart = GetFractionPart(Number);
+	if (abs(FractionPart) > 0) {
+		if (Number > 0)
+			return IntPart + 1;
+		else
+			return IntPart;
+	}
+	else
+		return IntPart;
+}
+float MySqrt(float Number) {
+
+return pow (Number , .5);
+
+}
+
+int main() {
+	
+	// 46/ 2 abs function
+	int Num;
+	Num = ReadNumber();
+	cout << "My abs : " << MyABS(Num) << endl;
+	cout << "C++ abs : " << abs(Num) << endl;
+	// 47/2 round function 
+	float Number = ReadNumber();
+	cout << "My Round function: " << MyRound(Number) << endl;
+	cout << "C++ Round function: " << round(Number) << endl;
+
+	// # 48/2 floor function
+	Number = ReadNumber();
+	cout << "My floor function: " << MyFloor(Number) << endl;
+	cout << "C++ floor function: " << floor(Number) << endl;
+	// 49/2 ceil function 
+	Number = ReadNumber();
+	cout << "My ceil function: " << MyCeil(Number) << endl;
+	cout << "C++ ceil function: " << ceil(Number) << endl;
+	// 50/2 sqrt root function 
+	Number = ReadNumber();
+
+	cout << "My ceil function: " << MySqrt(Number) << endl;
+	cout << "C++ ceil function: " << sqrt(Number) << endl;
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
