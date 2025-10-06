@@ -4,6 +4,6 @@
 
 ### It took me about 1.5 Year 😎
 
-👉 <a href="https://www.linkedin.com/in/abuhadhoud" target="_blank">Info about the Instructor</a>
+👉 [Info about the Instructor](https://www.linkedin.com/in/abuhadhoud)
 
-👉 <a href="https://programmingadvices.com/p/roadmap" target="_blank">View the Roadmap for more details</a>
+👉 [View the Roadmap for more details](https://programmingadvices.com/p/roadmap)
