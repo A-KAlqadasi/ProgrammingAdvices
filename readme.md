@@ -2,7 +2,7 @@
 
 ## I have complete programming advices roadmap by Eng.Mohammed Abu-Hadhoud
 
-### It took me about 1.5 Year 😎
+### It took me about 1.5 Year😎
 
 👉 [Info about the Instructor](https://www.linkedin.com/in/abuhadhoud)
 
